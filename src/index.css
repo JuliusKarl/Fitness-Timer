@@ -1,5 +1,6 @@
 * {
   -webkit-appearance: none;
+  -webkit-tap-highlight-color: none;
   font-family: 'Questrial', sans-serif;
   text-align: center;
 }
