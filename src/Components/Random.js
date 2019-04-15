@@ -26,11 +26,13 @@ class Random extends Component {
     }
     
     start = () => {
+        this.setState({
+            play: true,
+            stop: false
+        })
         this.myInterval = setInterval(() => {
             this.setState({
                 count: this.state.count + 1,
-                play: true,
-                stop: false
             })
         }, 1000)
     }
@@ -60,7 +62,7 @@ class Random extends Component {
     render() {
         return(
             <div className="activeWindow">
-                <h1 className="number">{Math.round(this.state.count)}</h1>
+                <h1 className="number">{this.state.count}</h1>
                 <input
                     type="number"
                     pattern="[0-9]*"
