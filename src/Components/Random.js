@@ -32,9 +32,7 @@ class Random extends Component {
                 play: true,
                 stop: false
             })
-        }, 10)
-        console.log(this.state.min)
-        console.log(this.state.max)
+        }, 1000)
     }
 
     stop = () => {
@@ -62,7 +60,7 @@ class Random extends Component {
     render() {
         return(
             <div className="activeWindow">
-                <h1 className="number">{Math.round(this.state.count/100)}</h1>
+                <h1 className="number">{Math.round(this.state.count)}</h1>
                 <input
                     type="number"
                     pattern="[0-9]*"
