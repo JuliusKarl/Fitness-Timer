@@ -38,7 +38,7 @@ button {
   outline: none;
 }
 
-#activeWindow {
+.activeWindow {
   display: grid;
   height: 40vh;
   justify-content: center;
@@ -56,4 +56,9 @@ button {
 
  .btn:focus, active  {
   outline:none;
+}
+
+.number {
+  font-size: 60px;
+  padding: 0px;
 }

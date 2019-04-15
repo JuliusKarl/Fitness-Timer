@@ -46,7 +46,7 @@ class App extends Component {
               Fitness Trainer
           </button>
           {this.state.home ? 
-          <div id="activeWindow">
+          <div className="activeWindow">
             <button 
               name="Interval" 
               className="btn" 
