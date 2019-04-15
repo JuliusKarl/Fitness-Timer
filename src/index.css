@@ -27,6 +27,7 @@ button {
 .main {
   padding-top: 30px;
   height: 100vh;
+  overflow: hidden;
 }
 
 .headerIcon {

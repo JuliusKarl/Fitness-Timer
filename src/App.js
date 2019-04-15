@@ -13,14 +13,13 @@ import Interval from './Components/Interval'
 import Random from './Components/Random'
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       home: true,
       Interval: false,
       Random: false,
       BeepTest: false,
-      active: ""
     }
     this.handleChange = this.handleChange.bind(this)
   }
