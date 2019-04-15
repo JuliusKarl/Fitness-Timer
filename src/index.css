@@ -28,3 +28,7 @@ code {
    font-size: 24px;
    border-radius: 5px;
  }
+
+ .btn:focus, active  {
+  background: none;
+}
