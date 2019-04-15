@@ -1,4 +1,4 @@
-import React, {component} from 'react'
+import React, {Component} from 'react'
 import ReactDom from 'react-dom'
 
 class BeepTest extends Component {
