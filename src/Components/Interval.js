@@ -9,6 +9,7 @@ class Interval extends Component {
     render() {
         return(
             <div>
+                <h3>Interval Component</h3>
             </div>
         )
     }

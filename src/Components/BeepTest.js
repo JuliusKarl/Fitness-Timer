@@ -9,6 +9,7 @@ class BeepTest extends Component {
     render() {
         return(
             <div>
+                <h3>Beep Test Component</h3>
             </div>
         )
     }

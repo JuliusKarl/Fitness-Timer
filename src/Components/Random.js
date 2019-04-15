@@ -9,6 +9,7 @@ class Random extends Component {
     render() {
         return(
             <div>
+                <h3>Random Component</h3>
             </div>
         )
     }

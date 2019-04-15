@@ -1,6 +1,7 @@
 * {
   -webkit-appearance: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Questrial', sans-serif;
+  text-align: center;
 }
 
 body {
@@ -11,25 +12,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow:hidden
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .main {
-  display: grid;
-  justify-content: center;
-  grid-row-gap: 10px;
-  grid-auto-rows: 1fr
+  padding-top: 30px;
 }
+
+.headerIcon {
+  font-size: 48px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+#activeWindow {
+  display: grid;
+  height: 40vh;
+  justify-content: center;
+  align-content: center;
+  grid-row-gap: 20px;
+  grid-auto-rows: 1fr;
+  padding-top: 40px;
+}
+
  .btn {
    font-size: 24px;
    border-radius: 5px;
  }
 
  .btn:focus, active  {
-  background: none;
+  outline:none;
 }
