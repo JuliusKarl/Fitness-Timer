@@ -7,7 +7,7 @@ import Random from './Components/Random'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="main">
           <h1>Fitness Trainer</h1>
           <button>Interval Beeper</button>
           <button>Random Beeper</button>
