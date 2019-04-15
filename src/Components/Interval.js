@@ -7,7 +7,10 @@ class Interval extends Component {
         this.state = {}
     }
     render() {
-        return()
+        return(
+            <div>
+            </div>
+        )
     }
 }
 

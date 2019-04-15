@@ -7,7 +7,10 @@ class Random extends Component {
         this.state = {}
     }
     render() {
-        return()
+        return(
+            <div>
+            </div>
+        )
     }
 }
 
