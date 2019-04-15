@@ -1,5 +1,6 @@
 * {
   -webkit-appearance: none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -23,3 +24,7 @@ code {
   grid-row-gap: 10px;
   grid-auto-rows: 1fr
 }
+ .btn {
+   font-size: 24px;
+   border-radius: 5px;
+ }

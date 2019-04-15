@@ -9,9 +9,9 @@ class App extends Component {
     return (
       <div className="main">
           <h1>Fitness Trainer</h1>
-          <button>Interval Beeper</button>
-          <button>Random Beeper</button>
-          <button>Beep Test</button>
+          <button className="btn">Interval Beeper</button>
+          <button className="btn">Random Beeper</button>
+          <button className="btn">Beep Test</button>
       </div>
     );
   }
