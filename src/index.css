@@ -58,6 +58,14 @@ button {
   outline:none;
 }
 
+.start {
+  background-image: linear-gradient(#a4c18f, #c7eaad, #a4c18f);
+}
+
+.reset {
+  background-image: linear-gradient(#c18f8f, #eaadad, #c18f8f);
+}
+
 .number {
   font-size: 60px;
   padding: 0px;

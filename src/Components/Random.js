@@ -49,7 +49,9 @@ class Random extends Component {
         this.setState({
             count: 0,
             seconds: 0,
-            minute: 0
+            minute: 0,
+            min: 0,
+            max: 0
         })
     }
 //  Function to play sound. Not timed correctly
@@ -59,10 +61,11 @@ class Random extends Component {
             (this.state.max * 1000 - 
             this.state.min * 1000 + 1000) + 
             this.state.min * 1000);
-
-        this.clapTimeout = setTimeout(() => {
-            this.audio.play()
-        }, (this.state.max < this.state.min ? this.state.min * 1000: randomNumber))
+        if (this.state.min || this.state.max) {
+            this.clapTimeout = setTimeout(() => {
+                this.audio.play()
+            }, (this.state.max < this.state.min ? (this.state.min ? this.state.min : this.state.max) * 1000: randomNumber))
+        }
     }
 //  Changing Minimum and Maximum interval times.
     changeValues = (event) => {
@@ -114,17 +117,17 @@ class Random extends Component {
                 />
                 {this.state.stop && <button
                     onClick={this.start}
-                    className="btn">
+                    className="btn start">
                     Start
                 </button>}
                 {this.state.play && <button
                     onClick={this.stop}
-                    className="btn">
+                    className="btn start">
                     Pause
                 </button>}
                 <button
                     onClick={this.reset}
-                    className="btn"
+                    className="btn reset"
                     style={
                         {visibility: 
                         this.state.count == 0 &&
