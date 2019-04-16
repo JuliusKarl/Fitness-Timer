@@ -7,38 +7,37 @@ class Random extends Component {
         super()
         this.state = {
             count: 0,
+            seconds: 0,
+            minute: 0,
             min: 0,
             max: 0,
             play: false,
-            stop: true
+            stop: true,
         }
         this.url = beep;
         this.audio = new Audio(this.url);
-        this.play = this.play.bind(this)
         this.start = this.start.bind(this)
         this.stop = this.stop.bind(this)
         this.reset = this.reset.bind(this)
         this.changeValues = this.changeValues.bind(this)
     }
-
-    play = () => {
-        
-    }
-    
     start = () => {
         this.setState({
             play: true,
-            stop: false
+            stop: false,
         })
         this.myInterval = setInterval(() => {
             this.setState({
                 count: this.state.count + 1,
             })
-        }, 1000)
+        }, 100)
+        this.play()
     }
 
     stop = () => {
         clearInterval(this.myInterval)
+        clearTimeout(this.clapTimeout)
+        this.audio.pause()
         this.setState({
             count: this.state.count,
             play: false,
@@ -48,22 +47,57 @@ class Random extends Component {
 
     reset = () => {
         this.setState({
-            count: 0
+            count: 0,
+            seconds: 0,
+            minute: 0
         })
     }
+//  Function to play sound. Not timed correctly
+    play() {
+        const randomNumber = 
+            Math.floor(Math.random() * 
+            (this.state.max * 1000 - 
+            this.state.min * 1000 + 1000) + 
+            this.state.min * 1000);
+            console.log(randomNumber)
+            console.log(this.state.min * 1000)
 
+        this.clapTimeout = setTimeout(() => {
+            this.audio.play()
+        }, (this.state.max == this.state.min ? this.state.min * 1000: randomNumber))
+    }
+//  Changing Minimum and Maximum interval times.
     changeValues = (event) => {
         const {name, value} = event.target
         this.setState({
             [name]: value
         })
     }
-
+   
     render() {
+//      Formatting Time Display: Find way to double digit
+        if (this.state.count == 10) {
+            this.setState({
+                count: 0,
+                seconds: this.state.seconds + 1,
+            })
+        }
+        if (this.state.minute == 60) {
+            this.setState({
+                seconds: 0,
+                minute: this.state.minute + 1
+            })
+        }
+
         return(
             <div className="activeWindow">
-                <h1 className="number">{this.state.count}</h1>
+                <h1 className="number">
+                    {this.state.minute}: 
+                    {this.state.seconds}: 
+                    {this.state.count}
+                </h1>
                 <input
+                    required
                     type="number"
                     pattern="[0-9]*"
                     name="min"
@@ -72,10 +106,12 @@ class Random extends Component {
                     onChange={this.changeValues}
                 />
                 <input
+                    required
                     type="number"
                     pattern="[0-9]*"
                     name="max"
                     className="btn"
+                    value={this.state.max < this.state.min ? this.state.min : null}
                     placeholder="Max (seconds)"
                     onChange={this.changeValues}
                 />
@@ -92,7 +128,13 @@ class Random extends Component {
                 <button
                     onClick={this.reset}
                     className="btn"
-                    style={{visibility: this.state.count === 0 && "hidden"}}>
+                    style={
+                        {visibility: 
+                        this.state.count == 0 &&
+                        this.state.seconds == 0 &&
+                        this.state.minute == 0 && 
+                        "hidden"}
+                    }>
                     Reset
                 </button>
             </div>
