@@ -66,9 +66,9 @@ class App extends Component {
                 Beep Test
             </button>
           </div> : <p></p>}
-          {this.state.Interval? <Interval />: <p></p>}
-          {this.state.Random? <Random />: <p></p>}
-          {this.state.BeepTest? <BeepTest />: <p></p>}
+          {this.state.Interval? <Interval exists={this.state.Interval}/>: <p></p>}
+          {this.state.Random? <Random exists={this.state.Random}/>: <p></p>}
+          {this.state.BeepTest? <BeepTest exists={this.state.BeepTest}/>: <p></p>}
       </div>
     );
   }

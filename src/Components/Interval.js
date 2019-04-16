@@ -20,6 +20,10 @@ class Interval extends Component {
         this.reset = this.reset.bind(this)
         this.changeValues = this.changeValues.bind(this)
     }
+
+    componentWillUnmount() {
+        this.stop()
+    }
     start = () => {
         this.setState({
             play: true,
@@ -47,8 +51,6 @@ class Interval extends Component {
     reset = () => {
         this.setState({
             count: 0,
-            seconds: 0,
-            minute: 0,
         })
     }
 //  Function to play sound. Not timed correctly
@@ -81,7 +83,6 @@ class Interval extends Component {
                 minute: this.state.minute + 1
             })
         }
-
         return(
             <div className="activeWindow">
                 <h1 className="number">

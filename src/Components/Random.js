@@ -21,6 +21,9 @@ class Random extends Component {
         this.reset = this.reset.bind(this)
         this.changeValues = this.changeValues.bind(this)
     }
+    componentWillUnmount() {
+        this.stop()
+    }
     start = () => {
         this.setState({
             play: true,
