@@ -59,12 +59,10 @@ class Random extends Component {
             (this.state.max * 1000 - 
             this.state.min * 1000 + 1000) + 
             this.state.min * 1000);
-            console.log(randomNumber)
-            console.log(this.state.min * 1000)
 
         this.clapTimeout = setTimeout(() => {
             this.audio.play()
-        }, (this.state.max == this.state.min ? this.state.min * 1000: randomNumber))
+        }, (this.state.max < this.state.min ? this.state.min * 1000: randomNumber))
     }
 //  Changing Minimum and Maximum interval times.
     changeValues = (event) => {
@@ -111,7 +109,6 @@ class Random extends Component {
                     pattern="[0-9]*"
                     name="max"
                     className="btn"
-                    value={this.state.max < this.state.min ? this.state.min : null}
                     placeholder="Max (seconds)"
                     onChange={this.changeValues}
                 />
