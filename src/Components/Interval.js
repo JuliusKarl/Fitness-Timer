@@ -51,6 +51,8 @@ class Interval extends Component {
     reset = () => {
         this.setState({
             count: 0,
+            seconds: 0,
+            min: 0,
         })
     }
 //  Function to play sound. Not timed correctly
