@@ -39,7 +39,7 @@ class Random extends Component {
 
     stop = () => {
         clearInterval(this.myInterval)
-        clearTimeout(this.clapTimeout)
+        clearInterval(this.clapInterval)
         this.audio.pause()
         this.setState({
             count: this.state.count,
@@ -65,7 +65,7 @@ class Random extends Component {
             this.state.min * 1000 + 1000) + 
             this.state.min * 1000);
         if (this.state.min || this.state.max) {
-            this.clapTimeout = setTimeout(() => {
+            this.clapInterval = setInterval(() => {
                 this.audio.play()
             }, (this.state.max < this.state.min ? (this.state.min ? this.state.min : this.state.max) * 1000: randomNumber))
         }
