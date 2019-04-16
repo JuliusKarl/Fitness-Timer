@@ -1,4 +1,4 @@
-Visit the App Here: https://www.jkmacro.netlify.com
+Visit the App Here: https://jkmacro.netlify.com
 
 ## Fitness Trainer
 ![alt text](https://raw.githubusercontent.com/JuliusKarl/MyReactApp/master/public/31048.ico)
