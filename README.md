@@ -1,6 +1,8 @@
 Visit the App Here: https://www.jkmacro.netlify.com
 
 ## Fitness Trainer
+![alt text](https://raw.githubusercontent.com/JuliusKarl/MyReactApp/master/public/31048.ico)
+
 This application provides useful tools for athletes that want to train their reflexes, measure their stamina or live track their exercise routine:
 
 Interval Beeper
@@ -15,6 +17,9 @@ Beep Test
    Levels can be selected manually at the start of each level.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+------------------------------------------------------------------------------------------------------------------------
 
 ## Available Scripts
 
