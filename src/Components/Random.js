@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import ReactDom from 'react-dom'
-import beep from './../resources/beep.mp3'
 
 class Random extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             count: 0,
             seconds: 0,
@@ -14,8 +13,6 @@ class Random extends Component {
             play: false,
             stop: true,
         }
-        this.url = beep;
-        this.audio = new Audio(this.url);
         this.start = this.start.bind(this)
         this.stop = this.stop.bind(this)
         this.reset = this.reset.bind(this)
@@ -41,7 +38,7 @@ class Random extends Component {
         clearInterval(this.myInterval)
         clearTimeout(this.clapTimeout)
         clearTimeout(this.repeatBeep)
-        this.audio.pause()
+        this.props.audio.pause()
         this.setState({
             count: this.state.count,
             play: false,
@@ -60,7 +57,7 @@ class Random extends Component {
     play() {
         const randomNumber = 
             Math.floor(Math.random() * 
-            (this.state.max * 1000 - 
+            ((this.state.max - 1) * 1000 - 
             this.state.min * 1000 + 1000) + 
             this.state.min * 1000);
         const delay = 
@@ -71,12 +68,13 @@ class Random extends Component {
 
         if (this.state.min || this.state.max) {
             this.clapTimeout = setTimeout(() => {
-                this.audio.play()
+                this.props.audio.play()
             }, delay)
             this.repeatBeep = setTimeout(() => {
                 this.play()
             }, delay)
         }
+        console.log(randomNumber)
     }
 //  Changing Minimum and Maximum interval times.
     changeValues = (event) => {

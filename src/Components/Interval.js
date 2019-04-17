@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import ReactDom from 'react-dom'
-import beep from './../resources/beep.mp3'
 
 class Interval extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             count: 0,
             seconds: 0,
@@ -13,8 +12,6 @@ class Interval extends Component {
             play: false,
             stop: true,
         }
-        this.url = beep;
-        this.audio = new Audio(this.url);
         this.start = this.start.bind(this)
         this.stop = this.stop.bind(this)
         this.reset = this.reset.bind(this)
@@ -40,7 +37,7 @@ class Interval extends Component {
     stop = () => {
         clearInterval(this.myInterval)
         clearInterval(this.clapInterval)
-        this.audio.pause()
+        this.props.audio.pause()
         this.setState({
             count: this.state.count,
             play: false,
@@ -59,7 +56,7 @@ class Interval extends Component {
     play() {
         if (this.state.interval != 0) {
             this.clapInterval = setInterval(() => {
-                this.audio.play()
+                this.props.audio.play()
             }, this.state.interval * 1000)
         }
     }

@@ -1,17 +1,14 @@
 import React, {Component} from 'react'
 import ReactDom from 'react-dom'
-import beep from './../resources/beeptest.mp3'
 
 class BeepTest extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             count: 1,
             play: false,
             stop: true,
         }
-        this.url = beep;
-        this.audio = new Audio(this.url);
         this.start = this.start.bind(this)
         this.stop = this.stop.bind(this)
         this.reset = this.reset.bind(this)
@@ -25,11 +22,11 @@ class BeepTest extends Component {
             play: true,
             stop: false,
         })
-        this.audio.play()
+        this.props.audio.play()
     }
 
     stop = () => {
-        this.audio.pause()
+        this.props.audio.pause()
         this.setState({
             play: false,
             stop: true
@@ -41,7 +38,7 @@ class BeepTest extends Component {
             count: 1
         })
         this.stop()
-        this.audio.currentTime = 0;
+        this.props.audio.currentTime = 0;
         document.getElementById("select").selectedIndex = "0"
     }
 
@@ -55,47 +52,47 @@ class BeepTest extends Component {
     changeLevel() {
         switch(this.state.count) {
             case 1:
-                this.audio.currentTime = 10;
+                this.props.audio.currentTime = 10;
             case 2:
-                this.audio.currentTime = 50;
+                this.props.audio.currentTime = 50;
             case 3:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 4:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 5:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 6:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 7:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 8:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 9:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 10:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 11:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 12:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 13:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 14:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 15:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 16:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 17:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 18:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 19:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 20:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
             case 21:
-                this.audio.currentTime = 0;
+                this.props.audio.currentTime = 0;
         }
     }
    
@@ -144,7 +141,7 @@ class BeepTest extends Component {
                     style={
                         {visibility: 
                         this.state.stop && 
-                        this.audio.currentTime == 0 &&
+                        this.props.audio.currentTime == 0 &&
                         this.state.count == 1 &&
                         "hidden"}
                     }>

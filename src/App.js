@@ -12,9 +12,12 @@ import BeepTest from './Components/BeepTest'
 import Interval from './Components/Interval'
 import Random from './Components/Random'
 
+import beep from './resources/beep.mp3'
+import beepTestAudio from './resources/beeptest.mp3'
+
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
     this.state = {
       home: true,
       Interval: false,
@@ -22,6 +25,13 @@ class App extends Component {
       BeepTest: false,
     }
     this.handleChange = this.handleChange.bind(this)
+    this.beep = new Audio(beep);
+    this.beepTestAudio = new Audio(beepTestAudio);
+  }
+
+  componentDidMount() {
+    this.beep.load()
+    this.beepTestAudio.load()
   }
 
   handleChange(event) {
@@ -32,9 +42,7 @@ class App extends Component {
       Random: false,
       BeepTest: false,
       [name]: true,
-      
     })
-    console.log(this.state)
   }
   render() {
     return (
@@ -66,9 +74,9 @@ class App extends Component {
                 Beep Test
             </button>
           </div> : <p></p>}
-          {this.state.Interval? <Interval exists={this.state.Interval}/>: <p></p>}
-          {this.state.Random? <Random exists={this.state.Random}/>: <p></p>}
-          {this.state.BeepTest? <BeepTest exists={this.state.BeepTest}/>: <p></p>}
+          {this.state.Interval? <Interval audio={this.beep} exists={this.state.Interval}/>: <p></p>}
+          {this.state.Random? <Random audio={this.beep} exists={this.state.Random}/>: <p></p>}
+          {this.state.BeepTest? <BeepTest audio={this.beepTestAudio} exists={this.state.BeepTest}/>: <p></p>}
       </div>
     );
   }
