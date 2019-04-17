@@ -94,7 +94,7 @@ class Random extends Component {
                 seconds: this.state.seconds + 1,
             })
         }
-        if (this.state.minute == 60) {
+        if (this.state.seconds == 60) {
             this.setState({
                 seconds: 0,
                 minute: this.state.minute + 1
