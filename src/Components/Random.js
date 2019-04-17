@@ -39,7 +39,8 @@ class Random extends Component {
 
     stop = () => {
         clearInterval(this.myInterval)
-        clearInterval(this.clapInterval)
+        clearTimeout(this.clapTimeout)
+        clearTimeout(this.repeatBeep)
         this.audio.pause()
         this.setState({
             count: this.state.count,
@@ -53,8 +54,6 @@ class Random extends Component {
             count: 0,
             seconds: 0,
             minute: 0,
-            min: 0,
-            max: 0
         })
     }
 //  Function to play sound. Not timed correctly
@@ -64,10 +63,19 @@ class Random extends Component {
             (this.state.max * 1000 - 
             this.state.min * 1000 + 1000) + 
             this.state.min * 1000);
+        const delay = 
+            (this.state.max < this.state.min ? 
+            (this.state.min ? 
+            this.state.min : this.state.max) * 1000 : 
+            randomNumber)
+
         if (this.state.min || this.state.max) {
-            this.clapInterval = setInterval(() => {
+            this.clapTimeout = setTimeout(() => {
                 this.audio.play()
-            }, (this.state.max < this.state.min ? (this.state.min ? this.state.min : this.state.max) * 1000: randomNumber))
+            }, delay)
+            this.repeatBeep = setTimeout(() => {
+                this.play()
+            }, delay)
         }
     }
 //  Changing Minimum and Maximum interval times.
