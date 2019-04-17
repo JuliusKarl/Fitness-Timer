@@ -57,7 +57,7 @@ class Interval extends Component {
     }
 //  Function to play sound. Not timed correctly
     play() {
-        if (this.state.interval > 0) {
+        if (this.state.interval != 0) {
             this.clapInterval = setInterval(() => {
                 this.audio.play()
             }, this.state.interval * 1000)
@@ -79,7 +79,7 @@ class Interval extends Component {
                 seconds: this.state.seconds + 1,
             })
         }
-        if (this.state.minute == 60) {
+        if (this.state.seconds == 60) {
             this.setState({
                 seconds: 0,
                 minute: this.state.minute + 1
