@@ -28,11 +28,11 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this)
     this.beep = new Audio(beep);
     this.beepTestAudio = new Audio(beepTestAudio);
-    this.beep.load()
-    this.beepTestAudio.load()
   }
 
   componentDidMount() {
+    this.beep.load()
+    this.beepTestAudio.load()
     this.beep.oncanplaythrough = () => {
       this.beepTestAudio.oncanplaythrough = () => {
         this.setState({
