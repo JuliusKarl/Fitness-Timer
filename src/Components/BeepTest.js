@@ -44,12 +44,59 @@ class BeepTest extends Component {
         this.audio.currentTime = 0;
         document.getElementById("select").selectedIndex = "0"
     }
-//  Changing Minimum and Maximum interval times.
+
     changeValues = (event) => {
         const {name, value} = event.target
         this.setState({
             [name]: value
         })
+    }
+//  Find a way to bind the data for each option => single line code
+    changeLevel() {
+        switch(this.state.count) {
+            case 1:
+                this.audio.currentTime = 10;
+            case 2:
+                this.audio.currentTime = 50;
+            case 3:
+                this.audio.currentTime = 0;
+            case 4:
+                this.audio.currentTime = 0;
+            case 5:
+                this.audio.currentTime = 0;
+            case 6:
+                this.audio.currentTime = 0;
+            case 7:
+                this.audio.currentTime = 0;
+            case 8:
+                this.audio.currentTime = 0;
+            case 9:
+                this.audio.currentTime = 0;
+            case 10:
+                this.audio.currentTime = 0;
+            case 11:
+                this.audio.currentTime = 0;
+            case 12:
+                this.audio.currentTime = 0;
+            case 13:
+                this.audio.currentTime = 0;
+            case 14:
+                this.audio.currentTime = 0;
+            case 15:
+                this.audio.currentTime = 0;
+            case 16:
+                this.audio.currentTime = 0;
+            case 17:
+                this.audio.currentTime = 0;
+            case 18:
+                this.audio.currentTime = 0;
+            case 19:
+                this.audio.currentTime = 0;
+            case 20:
+                this.audio.currentTime = 0;
+            case 21:
+                this.audio.currentTime = 0;
+        }
     }
    
     render() {
