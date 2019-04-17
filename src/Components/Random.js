@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import ReactDom from 'react-dom'
 
 class Random extends Component {
     constructor(props) {
@@ -86,13 +85,13 @@ class Random extends Component {
    
     render() {
 //      Formatting Time Display: Find way to double digit
-        if (this.state.count == 10) {
+        if (this.state.count === 10) {
             this.setState({
                 count: 0,
                 seconds: this.state.seconds + 1,
             })
         }
-        if (this.state.seconds == 60) {
+        if (this.state.seconds === 60) {
             this.setState({
                 seconds: 0,
                 minute: this.state.minute + 1
@@ -139,9 +138,9 @@ class Random extends Component {
                     className="btn reset"
                     style={
                         {visibility: 
-                        this.state.count == 0 &&
-                        this.state.seconds == 0 &&
-                        this.state.minute == 0 && 
+                        this.state.count === 0 &&
+                        this.state.seconds === 0 &&
+                        this.state.minute === 0 && 
                         "hidden"}
                     }>
                     Reset

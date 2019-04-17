@@ -7,7 +7,6 @@
 
 
 import React, { Component } from 'react'
-import ReactDom from 'react-dom'
 import BeepTest from './Components/BeepTest'
 import Interval from './Components/Interval'
 import Random from './Components/Random'
