@@ -15,6 +15,7 @@ class BeepTest extends Component {
     }
     componentWillUnmount() {
         this.stop()
+        this.props.audio.currentTime = 0;
     }
     start = () => {
         this.setState({
