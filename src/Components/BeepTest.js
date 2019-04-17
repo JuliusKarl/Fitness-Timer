@@ -125,7 +125,7 @@ class BeepTest extends Component {
                     {this.state.count}
                 </h1>
                 <select id="select" name="count" className="btn" onChange={this.changeValues}>
-                    <option default hidden style={{color: '#676A6F'}}>Select a level...</option>
+                    <option selected disabled default hidden style={{color: '#676A6F'}}>Select a level...</option>
                     <option value="1">Level 1</option>
                     <option value="2">Level 2</option>
                     <option value="3">Level 3</option>
