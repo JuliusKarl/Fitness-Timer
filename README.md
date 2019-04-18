@@ -1,7 +1,7 @@
 Visit the App Here: https://jkmacro.netlify.com
 
 ## Fitness Trainer
-![alt text](https://raw.githubusercontent.com/JuliusKarl/MyReactApp/master/public/31048.ico)
+![alt text](https://raw.githubusercontent.com/JuliusKarl/MyReactApp/master/public/favicon.png)
 
 This application provides useful tools for athletes that want to train their reflexes, measure their stamina or live track their exercise routine:
 
@@ -16,15 +16,11 @@ Beep Test
  - This component is for those who want to measure their fitness and stamina accoridng to the beeper test used globally.
    Levels can be selected manually at the start of each level.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 
 ------------------------------------------------------------------------------------------------------------------------
 NOTES
- - Works fine on Desktop, beep delay issues on mobile (iOS) Android untested.
- - Interval Beeper component completed.
- - Random Timer does not yet change times after each iteration. (maybe loop a setTimeout())
- - Beep Test unfinished. (need to import audio, create a <select> option for each level with links)
+ - v1.0 Completed
  - 
- - As of right now this is solely a desktop application until the above is complete.
+ - Works fine on Desktop, setTimeout() and setInterval() delay issues on mobile (iOS) Android untested.
+ - Will need to format timer to a more standrd design: double digit values
 
