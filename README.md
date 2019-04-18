@@ -19,7 +19,7 @@ Beep Test
 
 ------------------------------------------------------------------------------------------------------------------------
 NOTES
- - v1.0 Completed
+ - v1.0 Completed (18/04/2019)
  - 
  - Works fine on Desktop, setTimeout() and setInterval() delay issues on mobile (iOS) Android untested.
  - Will need to format timer to a more standrd design: double digit values
