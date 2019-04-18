@@ -99,7 +99,8 @@ select {
   width: 100%;
 
 }
-
-#spinner {
-  padding-top: 40%;
+@media only screen and (max-width: 550px) {
+  #spinner {
+    padding-top: 40%;
+  }
 }
