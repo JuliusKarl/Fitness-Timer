@@ -119,6 +119,7 @@ class Interval extends Component {
                     }>
                     Reset
                 </button>
+                <input className="hide" />
             </div>
         )
     }

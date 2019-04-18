@@ -8,7 +8,7 @@
 }
 
 h1 {
-  margin: 30px 0px 0px 0px;
+  margin: 0px;
 }
 
 body {
@@ -47,9 +47,8 @@ select {
   align-content: center;
   grid-row-gap: 20px;
   grid-auto-rows: 1fr;
-  padding-top: 40px;
+  padding-top: 30px;
 }
-
 
 .btn {
   font-size: 24px;
@@ -79,6 +78,7 @@ select {
 }
 
 .number {
+  padding-top: 10px;
   font-size: 80px;
 }
 
@@ -91,7 +91,6 @@ select {
 }
 
 /* Custom ID's */
-
 #footer {
   position: fixed;
   font-size: 10px;
