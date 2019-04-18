@@ -92,11 +92,7 @@ class App extends Component {
             {this.state.BeepTest? <BeepTest audio={this.beepTestAudio} exists={this.state.BeepTest}/>: <p></p>}
         </div>
         <p id="footer">
-          © 2018 
-          <i>JKMACRO</i> 
-          AND 
-          <i>MACROMEDIA</i> 
-          LIMITED ALL RIGHTS RESERVED
+          © 2018 <i>JKMACRO</i> AND <i>MACROMEDIA</i> LIMITED ALL RIGHTS RESERVED
         </p>
       </div>
     );
