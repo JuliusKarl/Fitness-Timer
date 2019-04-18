@@ -19,7 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 80vh;
   overflow: hidden;
-  background: #f9fbfc;
+  background: #f9fdff;
 }
 
 .hide {
@@ -63,7 +63,7 @@ select {
  .btn {
    font-size: 24px;
    border-radius: 5px;
-   background: #eff3f7;
+   background-image: linear-gradient(#eff6ff, #f2f6fc, #e3e9ef);
  }
 
  .btn:focus, active  {
@@ -71,11 +71,11 @@ select {
 }
 
 .start {
-  background-image: linear-gradient(#a4c18f, #c7eaad, #a4c18f);
+  background-image: linear-gradient(#d2f7b7, #c7eaad, #a4c18f);
 }
 
 .reset {
-  background-image: linear-gradient(#c18f8f, #eaadad, #c18f8f);
+  background-image: linear-gradient(#fcbaba, #eaadad, #c18f8f);
 }
 
 .number {
