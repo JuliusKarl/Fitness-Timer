@@ -81,3 +81,7 @@ select {
 .number {
   font-size: 80px;
 }
+
+#spinner {
+  padding-top: 40%;
+}

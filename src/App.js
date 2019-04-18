@@ -55,9 +55,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="activeWindow" style={{display: this.state.loaded && "none"}}>
+        <div id="spinner" className="activeWindow" style={{display: this.state.loaded && "none"}}>
               <Spinner size={100} spinnerColor={"#333"} spinnerWidth={6} visible={true} />
-              <h2>Loading...</h2>
+              <h2>Loading</h2>
         </div>
         <div className="main" style={{display: !this.state.loaded && "none"}}>
             <button
