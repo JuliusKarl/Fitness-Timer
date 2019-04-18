@@ -94,7 +94,7 @@ select {
 
 #footer {
   position: fixed;
-  font-size: 8px;
+  font-size: 10px;
   bottom: 0;
   width: 100%;
   color:  #8e9396
@@ -103,5 +103,8 @@ select {
 @media only screen and (max-width: 550px) {
   #spinner {
     padding-top: 40%;
+  }
+  #footer {
+    font-size: 8px;
   }
 }
