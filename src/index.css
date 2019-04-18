@@ -70,6 +70,7 @@ select {
 
 .hide {
   visibility: hidden;
+  font-size: 24px;
 }
 
 
