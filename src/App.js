@@ -33,8 +33,8 @@ class App extends Component {
   componentDidMount() {
     this.beep.load()
     this.beepTestAudio.load()
-    this.beep.oncanplaythrough = () => {
-      this.beepTestAudio.oncanplaythrough = () => {
+    this.beep.oncanplay = () => {
+      this.beepTestAudio.oncanplay = () => {
         this.setState({
           loaded: true
         })
