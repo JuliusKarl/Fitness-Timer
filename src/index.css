@@ -94,9 +94,10 @@ select {
 
 #footer {
   position: fixed;
-  font-size: 9px;
+  font-size: 8px;
   bottom: 0;
   width: 100%;
+  color:  #8e9396
 
 }
 @media only screen and (max-width: 550px) {
