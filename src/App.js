@@ -11,6 +11,7 @@ import BeepTest from './Components/BeepTest'
 import Interval from './Components/Interval'
 import Random from './Components/Random'
 import Spinner from 'react-spinner-material';
+import back from './resources/back.png'
 
 import beep from './resources/beep.mp3'
 import beepTestAudio from './resources/beeptest.mp3'
@@ -64,7 +65,7 @@ class App extends Component {
               name="home"
               className="headerIcon"
               onClick={this.handleChange}>
-                {this.state.home? 'Fitness Trainer' : '<<menu'}
+                {this.state.home? 'Fitness Trainer' : <img name="home" src={back}/>}
             </button>
             {this.state.home ? 
             <div className="activeWindow">
