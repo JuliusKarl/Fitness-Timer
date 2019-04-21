@@ -55,6 +55,7 @@ select {
   font-size: 24px;
   border-radius: 5px;
   background-image: linear-gradient(#eff6ff, #f2f6fc, #e3e9ef);
+  cursor: pointer;
 }
 
 .btn:focus, active  {
@@ -74,6 +75,7 @@ select {
   border: none;
   background: none;
   outline: none;
+  cursor: pointer;
 }
 
 

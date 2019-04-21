@@ -64,7 +64,7 @@ class App extends Component {
               name="home"
               className="headerIcon"
               onClick={this.handleChange}>
-                Fitness Trainer
+                {this.state.home? 'Fitness Trainer' : '<<menu'}
             </button>
             {this.state.home ? 
             <div className="activeWindow">
