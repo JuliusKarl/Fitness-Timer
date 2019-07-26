@@ -16,6 +16,9 @@ Beep Test
  - This component is for those who want to measure their fitness and stamina accoridng to the beeper test used globally.
    Levels can be selected manually at the start of each level.
 
+LinkedIn: https://www.linkedin.com/in/juliuskarl/<br/>
+Instagram: https://www.instagram.com/juliuskarlm/
+
 
 ------------------------------------------------------------------------------------------------------------------------
 NOTES
